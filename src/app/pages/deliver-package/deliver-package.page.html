@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/complex-detail"></ion-back-button>
+    </ion-buttons>
+    <div class="center-header">
+      <ion-img class="img-logo" src="../../../assets/icon/icon-app.png"></ion-img>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="section-info">
+    <div class="section-title">
+      <ion-label class="title">Complejo 1 - Caseta A</ion-label>
+    </div>
+    <div class="section-subtitle">
+      <ion-label class="title">Código Paquete</ion-label>
+      <ion-input class="input_login"></ion-input>
+    </div>
+  </div>
+  <div class="section-btn">
+    <ion-button shape="round" fill="solid" (click)="acceptPackage()" >Validar</ion-button>
+  </div>
+</ion-content>
+
+

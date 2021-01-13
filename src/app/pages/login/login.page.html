@@ -4,14 +4,15 @@
   </div>
   
   <div class="content">
-    <ion-item>
+    <div class="div-login">
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item>
+      <ion-input class="input_login"></ion-input>
+    </div>
+     
+    <div class="div-login">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+      <ion-input class="input_login"></ion-input>
+    </div> 
     <div class="forgot">
       <a (click)="changePassword()">
         <ion-label class="forgot-pass">Olvidé mi contraseña</ion-label>
@@ -27,10 +28,10 @@
         <ion-label>ó</ion-label>
       </div>  
       
-      <ion-item>
-        <ion-label position="floating">Tengo un código SMS</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+      <div class="div-login">
+        <ion-label position="floating" >Tengo un código SMS</ion-label>
+        <ion-input class="input_login"></ion-input>
+      </div>
       <div class="section-btn">
         <ion-button shape="round" fill="solid" >Ingresar</ion-button>
       </div>

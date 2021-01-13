@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/register-visit-step1"></ion-back-button>
+    </ion-buttons>
+    <div class="center-header">
+      <ion-img class="img-logo" src="../../../assets/icon/icon-app.png"></ion-img>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="section-info">
+    <div class="section-title">
+      <ion-label class="title">Complejo 1 - Caseta A</ion-label>
+    </div>
+    <div class="section-subtitle">
+      <ion-label class="title">Ingrese el código para registrar la entrada</ion-label>
+    </div>
+    <div class="section-subtitle">
+      <ion-label class="title">Código Guardia</ion-label>
+      <ion-input class="input_login" value=""></ion-input>
+    </div>
+  </div>
+  <div class="section-btn">
+    <ion-button shape="round" fill="solid" (click)="goConfirm()" >Validar</ion-button>
+  </div>
+</ion-content>
+
+

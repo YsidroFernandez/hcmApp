@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-complex',
@@ -11,23 +13,32 @@ export class ComplexPage implements OnInit {
     {
       id:1,
       title: "Complex 1",
-      code: "BPB11"
+      code: "BPB11",
+      admin: false
     },
     {
       id:2,
       title: "Complex 2",
-      code: "A2"
+      code: "A2",
+      admin: false,
     },
     {
-      id:1,
+      id:3,
       title: "Complex 2",
-      code: "ADMIN"
+      code: "ADMIN",
+      admin: true
     }
   ]
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  goToDetail(item){
+    this.router.navigate(['complex-detail'],item);
   }
 
 }
