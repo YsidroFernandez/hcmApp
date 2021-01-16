@@ -38,7 +38,8 @@ export class ComplexPage implements OnInit {
   }
 
   goToDetail(item){
-    this.router.navigate(['complex-detail'],item);
+    console.log(item)
+    this.router.navigate(['complex-detail',item]);
   }
 
 }

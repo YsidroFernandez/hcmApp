@@ -1,16 +1,16 @@
-<ion-content>
+<ion-content color="greenprimary">
   <div class="center-header">
-    <ion-img class="img-logo" src="../../../assets/icon/icon-app.png"></ion-img>
+    <ion-img class="img-logo" src="../../../assets/icon/logo_transparent.png"></ion-img>
   </div>
   
   <div class="content">
     <div class="div-login">
-      <ion-label position="floating">Usuario</ion-label>
+      <ion-label position="floating" class="label_input">Usuario</ion-label>
       <ion-input class="input_login"></ion-input>
     </div>
      
     <div class="div-login">
-      <ion-label position="floating">Contraseña</ion-label>
+      <ion-label position="floating" class="label_input">Contraseña</ion-label>
       <ion-input class="input_login"></ion-input>
     </div> 
     <div class="forgot">
@@ -20,7 +20,7 @@
     </div>
     
     <div class="section-btn">
-      <ion-button shape="round" fill="solid" (click)="goToComplex()">Ingresar</ion-button>
+      <ion-button shape="round" fill="solid" (click)="goToComplex()" color="danger">Ingresar</ion-button>
     </div>
     
     <div class="section-code">
@@ -29,11 +29,11 @@
       </div>  
       
       <div class="div-login">
-        <ion-label position="floating" >Tengo un código SMS</ion-label>
+        <ion-label position="floating" class="label_input">Tengo un código SMS</ion-label>
         <ion-input class="input_login"></ion-input>
       </div>
       <div class="section-btn">
-        <ion-button shape="round" fill="solid" >Ingresar</ion-button>
+        <ion-button shape="round" fill="solid" color="danger" (click)="goToComplex()">Ingresar</ion-button>
       </div>
     </div>
 
