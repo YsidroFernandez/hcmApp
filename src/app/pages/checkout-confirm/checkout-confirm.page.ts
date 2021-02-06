@@ -8,14 +8,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CheckoutConfirmPage implements OnInit {
 
+  complex : any;
   constructor(
-    private router : Router
+    private router : Router,
+    private params : ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.complex = this.params.snapshot.paramMap['params'];
+    console.log(this.complex)
   }
 
   exit(){
-    this.router.navigate(['complex-detail']);
+    this.router.navigate(['complex']);
   }
 }

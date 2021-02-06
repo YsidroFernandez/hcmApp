@@ -1,23 +1,24 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="greenprimary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/check-balance"></ion-back-button>
+      <ion-back-button defaultHref="/check-balance" color="basewhite"></ion-back-button>
     </ion-buttons>
-    <div class="center-header">
-      <ion-img class="img-logo" src="../../../assets/icon/icon-app.png"></ion-img>
-    </div>
+    <ion-title class="title-header">Declaración</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="section-info">
-    <ion-label class="title">BPB11</ion-label>
-    <ion-textarea class="input_textarea"  placeholder="Añada una descripción"></ion-textarea>
-    <ion-input class="input_textarea" placeholder="Adjunto"  ></ion-input>
+    <ion-label >Descripción</ion-label>
+    <ion-textarea class="input_textarea"  placeholder="Añada una descripción"></ion-textarea>   
+  </div>
+  <div class="section-info">
+    <ion-label >Añadir adjunto</ion-label>
+    <ion-input class="input_login" placeholder="Adjunto"  ></ion-input>
    
   </div>
   <div class="section-btn">
-    <ion-button shape="round" fill="solid" (click)="saveDeclaration()" >Enviar</ion-button>
+    <ion-button shape="round" fill="solid" (click)="saveDeclaration()" color="danger">Enviar</ion-button>
   </div>
 </ion-content>
 

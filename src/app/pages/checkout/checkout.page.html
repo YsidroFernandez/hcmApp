@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="greenprimary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/complex-detail"></ion-back-button>
+      <ion-back-button defaultHref="/complex-detail" color="basewhite"></ion-back-button>
     </ion-buttons>
     <div class="center-header">
       <ion-img class="img-logo" src="../../../assets/icon/icon-app.png"></ion-img>
@@ -16,15 +16,18 @@
     </div>
     <div class="section-subtitle">
       <ion-label class="title">Personal/Casa</ion-label>
-      <ion-input class="input_login" value="Rober"></ion-input>
+      <ion-input class="input_login" value="{{user}}"></ion-input>
  
     </div>
   </div>
   <div class="section-item">
     <ion-list>
-      <ion-item *ngFor="let item of data" lines="full" (click)="confrimExit()"> 
+      <ion-item color="greenprimary">
+        <ion-label color="basewhite">Nombre</ion-label>
+        <ion-label color="basewhite">Complejo</ion-label>
+      </ion-item>
+      <ion-item *ngFor="let item of data" lines="full" (click)="confrimExit(item)" detail> 
         <ion-label class="detail-label">{{ item.owner }} </ion-label>
-        <ion-label class="detail-label"> - </ion-label>
         <ion-label class="detail-label">{{ item.code }}</ion-label>
         
       </ion-item>

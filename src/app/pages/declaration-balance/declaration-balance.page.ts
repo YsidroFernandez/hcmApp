@@ -16,6 +16,6 @@ export class DeclarationBalancePage implements OnInit {
   }
 
   saveDeclaration(){
-    this.router.navigate(['complex-detail']);
+    this.router.navigate(['complex']);
   }
 }

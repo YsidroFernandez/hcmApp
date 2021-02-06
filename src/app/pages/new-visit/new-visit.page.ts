@@ -33,12 +33,17 @@ export class NewVisitPage implements OnInit {
     }
   ]
 
-
+  complex : any;
+  user : any;
   constructor(
-    private router : Router
+    private router : Router,
+    private params : ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.complex = this.params.snapshot.paramMap['params'];
+    console.log(this.complex)
+    this.user = localStorage.getItem('usuario')
   }
 
   goToRequest(){

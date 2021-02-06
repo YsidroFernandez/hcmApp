@@ -16,7 +16,7 @@ export class RegisterVisitStep2Page implements OnInit {
   }
 
   goConfirm(){
-    this.router.navigate(['complex-detail']);
+    this.router.navigate(['complex']);
   }
 
 }

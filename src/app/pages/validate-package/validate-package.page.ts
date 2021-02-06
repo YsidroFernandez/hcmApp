@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { ToastServiceService } from '../../services/toast-service.service';
 
 @Component({
   selector: 'app-validate-package',
@@ -10,14 +10,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ValidatePackagePage implements OnInit {
 
   constructor(
-    private router : Router
+    private router : Router,
+    private toastService : ToastServiceService
   ) { }
 
   ngOnInit() {
   }
 
   confirmPackage(){
-    this.router.navigate(['complex-detail']);
+    this.toastService.presentToast("Paquete entregado","success","botton");
+    this.router.navigate(['complex']);
   }
 
 }

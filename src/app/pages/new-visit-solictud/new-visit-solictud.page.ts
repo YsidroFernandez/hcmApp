@@ -16,7 +16,7 @@ export class NewVisitSolictudPage implements OnInit {
   }
 
   goConfirm(){
-    this.router.navigate(['complex-detail']);
+    this.router.navigate(['complex']);
   }
 
 }

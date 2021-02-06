@@ -16,6 +16,6 @@ export class IncidenciaPage implements OnInit {
   }
 
   saveIncidence(){
-    this.router.navigate(['complex-detail']);
+    this.router.navigate(['complex']);
   }
 }

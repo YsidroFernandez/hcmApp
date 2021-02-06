@@ -8,11 +8,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CheckBalancePage implements OnInit {
 
+  user : string;
   constructor(
     private router : Router
   ) { }
 
   ngOnInit() {
+    this.user = localStorage.getItem('usuario');
   }
 
   saveDeclaration(){

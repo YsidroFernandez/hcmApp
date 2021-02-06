@@ -9,20 +9,24 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RegisterVisitPage implements OnInit {
 
+  complex : any;
   constructor(
-    private router : Router
+    private router : Router,
+    private params : ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.complex = this.params.snapshot.paramMap['params'];
+    console.log(this.complex)
   }
 
   registrar(item){
   
-    this.router.navigate(['register-visit-step1']);
+    this.router.navigate(['register-visit-step1',this.complex]);
     
   }
 
   newRegister(){
-    this.router.navigate(['new-visit']);
+    this.router.navigate(['new-visit',this.complex]);
   }
 }

@@ -12,19 +12,19 @@ export class ComplexPage implements OnInit {
   public data = [
     {
       id:1,
-      title: "Complex 1",
+      title: "Complejo 1",
       code: "BPB11",
       admin: false
     },
     {
       id:2,
-      title: "Complex 2",
+      title: "Complejo 2",
       code: "A2",
       admin: false,
     },
     {
       id:3,
-      title: "Complex 2",
+      title: "Complejo 2",
       code: "ADMIN",
       admin: true
     }

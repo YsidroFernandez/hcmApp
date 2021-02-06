@@ -32,7 +32,7 @@ export class ComplexDetailPage implements OnInit {
       id:4,
       title: "Reportar Salida",
       code: "EXIT",
-      img: "https://lh3.googleusercontent.com/proxy/vsl6PX4ZZLAx9c9Fjmw6tg1h1te2H6S8UTEbTk1Ny8C0zCt_pruF0QdLAZ6wmn93651mdvbypEyA_DCTTBZpHjyLQmf9mfq-xmduTmvVXcmQv5kcz1WYAwuGOu2sP8g1YH6qOFrfRw"
+      img: "https://png.pngtree.com/png-clipart/20190520/original/pngtree-exit-icon-png-image_3550242.jpg"
     },
     {
       id:5,
@@ -42,7 +42,7 @@ export class ComplexDetailPage implements OnInit {
     },
     {
       id:6,
-      title: "Reportar Incidencia",
+      title: "Incidencia",
       code: "PBD11",
       img : "https://previews.123rf.com/images/mammothis/mammothis1511/mammothis151100011/48058116-el-hombre-est%C3%A1-votando-en-las-elecciones.jpg"
     },
@@ -76,19 +76,19 @@ export class ComplexDetailPage implements OnInit {
 
   goToReceivePackage(item){
     if(item.id == 1){
-      this.router.navigate(['receive-package']);
+      this.router.navigate(['receive-package',this.complex]);
     }else if(item.id == 2){
-      this.router.navigate(['deliver-package']);
+      this.router.navigate(['deliver-package',this.complex]);
     }else if(item.id == 3){
-      this.router.navigate(['register-visit']);
+      this.router.navigate(['register-visit',this.complex]);
     }else if(item.id == 4){
-      this.router.navigate(['checkout']);
+      this.router.navigate(['checkout',this.complex]);
     }else if(item.id == 5){
-      this.router.navigate(['check-balance']);
+      this.router.navigate(['check-balance',this.complex]);
     }else if(item.id == 6){
-      this.router.navigate(['incidencia']);
+      this.router.navigate(['incidencia',this.complex]);
     }else if(item.id == 7){
-      this.router.navigate(['information']);
+      this.router.navigate(['information',this.complex]);
     }else{
       console.log('Not found')
     }

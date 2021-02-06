@@ -31,14 +31,17 @@ export class CheckoutPage implements OnInit {
     }
   ]
 
+  user : any; 
+
   constructor(
     private router : Router
   ) { }
 
   ngOnInit() {
+    this.user = localStorage.getItem('usuario')
   }
 
-  confrimExit(){
-    this.router.navigate(['checkout-confirm']);
+  confrimExit(item){
+    this.router.navigate(['checkout-confirm',item]);
   }
 }

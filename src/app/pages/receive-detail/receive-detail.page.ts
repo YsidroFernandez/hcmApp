@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { ToastServiceService } from '../../services/toast-service.service';
 @Component({
   selector: 'app-receive-detail',
   templateUrl: './receive-detail.page.html',
@@ -8,14 +8,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ReceiveDetailPage implements OnInit {
 
+  user : any;
   constructor(
-    private router: Router
+    private router: Router,
+    private params : ActivatedRoute,
+    private toastServcice : ToastServiceService
   ) { }
 
   ngOnInit() {
+    this.user = this.params.snapshot.paramMap['params'];
+    console.log(this.user)
   }
 
   acceptPackage(){
-    this.router.navigate(['receive-package']);
+    this.toastServcice.presentToast('Paquete recibido correctamente','success','botton')
+    this.router.navigate(['complex']);
   }
 }
